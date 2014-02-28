@@ -160,6 +160,11 @@
 					
 			return false;
 		};
+	$.fn.removeAllTags = function() {
+                id = $(this).attr('id');
+                $(this).val('');
+		$('#'+id+'_tagsinput .tag').remove();
+	}
 	
 	$.fn.tagExist = function(val) {
 		var id = $(this).attr('id');
